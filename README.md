@@ -4,11 +4,6 @@ Quolo is an open-source project integrating large language models with a role-ba
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js
-- npm
-
 ### Installation
 
 Install the package via npm:
