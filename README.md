@@ -11,16 +11,37 @@ Quolo is an open-source project integrating large language models with a role-ba
 
 ### Installation
 
-1. Clone the repository
-2. Install dependencies
-3. Start the server
+Install the package via npm:
 
 ```sh
-git clone https://github.com/adacahq/quolo.git
-cd quolo
-npm install
-npm run build
-npm start
+npm install quolo
+```
+
+### Usage
+
+#### OpenAI Service
+
+First, set your OpenAI API key in your environment variables:
+
+```sh
+OPENAI_API_KEY='your-openai-api-key'
+```
+
+Then, use the library in your project:
+
+```typescript
+import { getOpenAIResponse, getOpenAIEngines } from 'quolo';
+
+const main = async () => {
+  const prompt = 'Hello, how are you?';
+  const response = await getOpenAIResponse(prompt);
+  console.log('Response from OpenAI:', response);
+
+  const engines = await getOpenAIEngines();
+  console.log('Available OpenAI engines:', engines);
+};
+
+main();
 ```
 
 ### Running Tests
