@@ -155,3 +155,6 @@ bazel-*
 
 # Nuxt.js
 .nuxt/
+
+# Package lock files
+package-lock.json
