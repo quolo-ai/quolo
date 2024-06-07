@@ -1,5 +1,5 @@
 export interface IPlatformService {
-  // General method signatures common across all platforms
+  getAvailableModels(): Promise<string[]>;
   generateText(prompt: string, model: string): Promise<string>;
   // TODO: Other common functionalities like embeddings, translations, etc.
 }

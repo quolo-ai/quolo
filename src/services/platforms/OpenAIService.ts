@@ -2,26 +2,25 @@ import OpenAI from 'openai';
 import { IPlatformService } from "../../interfaces/IPlatformService";
 
 export class OpenAIService implements IPlatformService {
-  constructor(private apiKey: string) {}
-
-  async generateText(prompt: string, model: string = 'text-davinci-002'): Promise<string> {
-    // OpenAI API interaction logic
-    return "Generated text from OpenAI";
-  }
-}
-
-/*
-export class OpenAIService {
   private openai: OpenAI;
 
-  constructor(apiKey: string) {
-      const openai = new OpenAI({
-          apiKey: apiKey
-      });
-      this.openai = openai;
+  constructor(private apiKey: string) {
+    this.openai = new OpenAI({
+      apiKey: apiKey
+    });
   }
 
-  async createCompletion(prompt: string, model: string = 'text-davinci-002', maxTokens: number = 150): Promise<string> {
+  async getAvailableModels(): Promise<string[]> {
+    try {
+      const models = await this.openai.models.list();
+      return models.data.map((model: any) => model.name);
+    } catch (error) {
+      console.error('Failed to retrieve models from OpenAI:', error);
+      throw error;
+    }
+  }
+
+  async generateText(prompt: string, model: string = 'text-davinci-002'): Promise<string> {
     try {
       const completion = await this.openai.chat.completions.create({
         messages: [{
@@ -37,5 +36,5 @@ export class OpenAIService {
         throw error;
     }
   }
+
 }
-*/
