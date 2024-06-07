@@ -72,39 +72,6 @@ These are the capabilities of each LLM provider:
 | Fine Tuning                       | Yes    | No        | Yes    | Yes    |
 | Retrieval Augmented Generation    | No     | No        | Yes    | Yes    |
 
-### Usage
-
-The process is as follows:
-
-1. Choose your platform (e.g. OpenAI)
-2. Choose your feature (e.g. Text Generation)
-3. 
-
-#### OpenAI Service
-
-First, set your OpenAI API key in your environment variables:
-
-```sh
-OPENAI_API_KEY='your-openai-api-key'
-```
-
-Then, use the library in your project:
-
-```typescript
-import { getOpenAIResponse, getOpenAIEngines } from 'quolo';
-
-const main = async () => {
-  const prompt = 'Hello, how are you?';
-  const response = await getOpenAIResponse(prompt);
-  console.log('Response from OpenAI:', response);
-
-  const engines = await getOpenAIEngines();
-  console.log('Available OpenAI engines:', engines);
-};
-
-main();
-```
-
 ## Credits
 
 This project was developed with contributions from the following individuals and organizations:
