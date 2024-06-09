@@ -3,7 +3,7 @@ import { PlatformServiceFactory } from "./factories/PlatformServiceFactory";
 import { ITextGeneration } from "./interfaces/ITextGeneration";
 
 export class Quolo {
-  private platformService: IPlatformService;
+  private platformService!: IPlatformService;
 
   constructor(platformName: string, apiKey: string) {
     this.setPlatform(platformName, apiKey);
