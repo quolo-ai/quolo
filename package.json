@@ -29,6 +29,7 @@
   "homepage": "https://github.com/adacahq/quolo#readme",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.22.0",
+    "@google/generative-ai": "^0.12.0",
     "openai": "^4.48.2"
   },
   "devDependencies": {
