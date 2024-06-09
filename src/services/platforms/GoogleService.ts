@@ -22,8 +22,8 @@ export class GoogleService implements IPlatformService {
       
       return text;
     } catch (error) {
-        console.error('Failed to create completion with Google:', error);
-        throw error;
+      console.error('Failed to create completion with Google:', error);
+      throw error;
     }
   }
 

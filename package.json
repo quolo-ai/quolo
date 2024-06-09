@@ -30,6 +30,7 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.22.0",
     "@google/generative-ai": "^0.12.0",
+    "cohere-ai": "^7.10.2",
     "openai": "^4.48.2"
   },
   "devDependencies": {
