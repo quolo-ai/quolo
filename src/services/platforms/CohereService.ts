@@ -11,7 +11,7 @@ export class CohereService implements IPlatformService {
   }
 
   async getAvailableModels(): Promise<string[]> {
-    return []; // not available in google
+    return []; // not available in cohere
   }
 
   async generateText(prompt: string, model: string = 'command'): Promise<string> {
