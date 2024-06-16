@@ -32,4 +32,23 @@ export class CohereService implements IPlatformService {
     }
   }
 
+  async generateEmbeddings(input: string[], model: string = 'embed-multilingual-v3.0'): Promise<number[]> {
+    try {
+      const embeddings = await this.cohere.embed({
+        model: model,
+        texts: input,
+        embeddingTypes: ['float']
+      });
+      // return embeddings.embeddings.float;
+      if ('float' in embeddings.embeddings && embeddings.embeddings.float) {
+        return embeddings.embeddings.float[0];
+      } else {
+        throw new Error("Embedding type 'float' is not available.");
+      }
+    } catch (error) {
+      console.error('Failed to create embeddings with Cohere:', error);
+      throw error;
+    }
+  }
+
 }

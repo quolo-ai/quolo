@@ -1,6 +1,7 @@
 import { IPlatformService } from "./interfaces/IPlatformService";
 import { PlatformServiceFactory } from "./factories/PlatformServiceFactory";
 import { ITextGeneration } from "./interfaces/ITextGeneration";
+import { IEmbeddings } from "./interfaces/IEmbeddings";
 
 export class Quolo {
   private platformService!: IPlatformService;
@@ -22,4 +23,15 @@ export class Quolo {
     }
     return (this.platformService as ITextGeneration).generateText(prompt, model);
   }
+
+  async generateEmbeddings(prompt: string[], model: string): Promise<number[]> {
+    if (!this.platformService) {
+      throw new Error("Platform service is not initialized.");
+    }
+    if (!('generateEmbeddings' in this.platformService)) {
+      throw new Error("Embeddings generation is not supported by the initialized platform.");
+    }
+    return (this.platformService as IEmbeddings).generateEmbeddings(prompt, model);
+  }
 }
+

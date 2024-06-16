@@ -37,4 +37,18 @@ export class OpenAIService implements IPlatformService {
     }
   }
 
+  async generateEmbeddings(input: string[], model: string = 'text-embedding-3-large'): Promise<number[]> {
+    try {
+      const embeddings = await this.openai.embeddings.create({
+        input: input[0],
+        model: model,
+        encoding_format: 'float'
+      });
+      return embeddings.data[0].embedding;
+    } catch (error) {
+      console.error('Failed to create embeddings with OpenAI:', error);
+      throw error;
+    }
+  }
+
 }

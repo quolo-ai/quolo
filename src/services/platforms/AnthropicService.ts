@@ -32,4 +32,8 @@ export class AnthropicService implements IPlatformService {
     }
   }
 
+  async generateEmbeddings(prompt: string[], model: string = 'claude-3-haiku-20240307'): Promise<number[]> {
+    throw new Error('Not available');
+  }
+
 }

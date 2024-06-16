@@ -27,4 +27,17 @@ export class GoogleService implements IPlatformService {
     }
   }
 
+  async generateEmbeddings(prompt: string[], model: string = 'text-embedding-004'): Promise<number[]> {
+    try {
+      const genModel = this.google.getGenerativeModel({ model: model });
+
+      const embeddings = await genModel.embedContent(prompt[0]);
+
+      return embeddings.embedding.values;
+    } catch (error) {
+      console.error('Failed to create embeddings with Google:', error);
+      throw error;
+    }
+  }
+
 }

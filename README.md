@@ -68,7 +68,7 @@ These are the capabilities of each LLM provider:
 |-----------------------------------|--------|-----------|--------|--------|
 | Text Generation                   | Yes    | Yes       | Yes    | Yes    |
 | Function Calling                  | Yes    | Yes       | Yes    | Yes    |
-| Embeddings                        | Yes    | Yes       | Yes    | Yes    |
+| Embeddings                        | Yes    | No        | Yes    | Yes    |
 | Fine Tuning                       | Yes    | No        | Yes    | Yes    |
 | Retrieval Augmented Generation    | No     | No        | Yes    | Yes    |
 
