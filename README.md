@@ -48,7 +48,7 @@ import { Quolo } from 'quolo';
 const quolo = new Quolo('openai', 'your_openai_api_key');
 
 // Use the instance to generate text
-quolo.generateText("What is quantum mechanics?", "text-davinci-002")
+quolo.generateText("What is quantum mechanics?", "gpt-3.5-turbo")
     .then(text => console.log("Generated Text:", text))
     .catch(error => console.error("Error:", error));
 ```

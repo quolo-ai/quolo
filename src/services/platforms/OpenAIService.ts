@@ -20,7 +20,7 @@ export class OpenAIService implements IPlatformService {
     }
   }
 
-  async generateText(prompt: string, model: string = 'text-davinci-002'): Promise<string> {
+  async generateText(prompt: string, model: string = 'gpt-3.5-turbo'): Promise<string> {
     try {
       const completion = await this.openai.chat.completions.create({
         messages: [{
