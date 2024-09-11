@@ -72,6 +72,14 @@ These are the capabilities of each LLM provider:
 | Fine Tuning                       | Yes    | No        | Yes    | Yes    |
 | Retrieval Augmented Generation    | No     | No        | Yes    | Yes    |
 
+### Roadmap
+
+The Quolo roadmap introduces new capabilities for each LLM provider, testing, RBAC integration, and expands support for Hugging Face and Azure platforms.
+
+![Quolo Roadmap](https://github.com/user-attachments/assets/e9512aae-c8e6-480c-a1f6-dc9b6b7ee975)
+
+
+
 ## Credits
 
 This project was developed with contributions from the following individuals and organizations:
@@ -84,7 +92,7 @@ Special thanks to the open-source community and the following projects:
 - [TypeScript](https://www.typescriptlang.org)
 - [OpenAI](https://www.openai.com)
 - [Anthropic](https://www.anthropic.com)
-
+        
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
