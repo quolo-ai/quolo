@@ -1,6 +1,6 @@
 {
   "name": "quolo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Quolo - An open-source project integrating large language models with a role-based permissions model.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
