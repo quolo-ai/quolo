@@ -1,10 +1,10 @@
 {
   "name": "quolo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Quolo - An open-source project integrating large language models with a role-based permissions model.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "tsup",
